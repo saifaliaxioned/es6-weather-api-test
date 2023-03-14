@@ -106,9 +106,31 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
+.form-container {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
 
+.city-form {
+  display: flex;
+}
 
+.weather-heading {
+  font-size: 30px;
+  font-weight: bold;
+}
 
+.weather-heading span { color: #45F3F7; }
+
+.error-container span {
+  display: block;
+}
+
+.validate-city {
+  font-size: 40px;
+  font-weight: bold;
+}
 
 
 
