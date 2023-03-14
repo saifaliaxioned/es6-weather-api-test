@@ -82,9 +82,21 @@ sub { bottom: -.25em; }
 .cf { *zoom: 1; }
 
 /*for all*/
+*,*::before,*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   box-sizing: border-box;
   font-family: sans-serif;
+  background: url('https://static.vecteezy.com/system/resources/thumbnails/008/407/915/original/beautiful-nature-of-iceland-empty-road-through-iceland-with-sunny-weather-and-rainy-clouds-in-the-background-road-number-1-is-iceland-s-main-road-4k-video.jpg')
+  rgba(0,0,0,.4) no-repeat center;
+  background-blend-mode: overlay;
+  background-size: cover;
+  color: #ffff;
+  background-attachment: fixed;
 }
 
 a { 
@@ -113,7 +125,35 @@ li {
 }
 
 .city-form {
+  flex-basis: 50%;
   display: flex;
+  align-items: center;
+}
+
+.input-group {
+  flex-basis: 70%;
+}
+
+.city-input {
+  width: 100%;
+  padding: 5px 10px 5px 5px;
+  border-color: #45F3F7;
+  outline: none;
+}
+
+.input-control input {
+  padding: 5px 30px;
+  border-color: #45F3F7;
+  background-color: #45F3F7;
+  font-weight: bold;
+  outline: none;
+  transition: all .3s ease;
+}
+
+.input-control input:hover {
+  color: #ffff;
+  border-color: #20bdc0;
+  background-color: #20bdc0;
 }
 
 .weather-heading {
@@ -123,8 +163,9 @@ li {
 
 .weather-heading span { color: #45F3F7; }
 
-.error-container span {
+.instruction {
   display: block;
+  font-weight: bold;
 }
 
 .validate-city {
@@ -132,6 +173,71 @@ li {
   font-weight: bold;
 }
 
+.weather-items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.weather-list {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-content {
+  padding: 8px 1%;
+  flex-basis: 45%;
+  background-color: rgba(199, 187, 187, 0.1);
+}
+
+.data-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.degree-content {
+  display: flex;
+  gap: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  align-items: flex-end;
+}
+
+.degree-content figure {
+  flex-basis: 30%;
+}
+
+.days-container {
+  padding-top: 10px;
+  display: flex;
+  background-color: rgba(0,0,0,.6);
+}
+
+.humidity-list {
+  padding: 10px;
+  background-color: #22645F;
+}
+
+.today-date,.upcoming-date {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.error-container {
+  margin: 20px 0 50px;
+}
+
+.upcoming-date { gap: 20px; }
+.upcoming-date span { display: block; }
+
+.upcoming-temp,.upcoming-day,.city-name,.day {
+  font-weight: bold;
+}
+
+.instruction { color: #000; }
+.date,.date-month { color: #45F3F7; }
+.hide-content { display: none; }
 
 
 /*=================================
