@@ -1,10 +1,10 @@
 <!doctype html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
-<html lang="en"> 
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Client</title>
+  <title>Weather app</title>
   <!-- View-port Basics: http://mzl.la/VYREaP -->
   <!-- This meta tag is used for mobile device to display the page without any zooming,
        so how much the device is able to fit on the screen is what's shown initially. 
@@ -13,10 +13,9 @@
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
   <link rel="shortcut icon" href="favicon.ico" />
   <!--font-awesome link for icons-->
-  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+  <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
 
 <body>
@@ -24,17 +23,39 @@
   <div class="container">
     <!--header section start-->
     <header>
-      
+
     </header>
     <!--header section start-->
     <!--main section start-->
     <main>
-
+      <section class="weather-api">
+        <div class="wrapper">
+          <div class="form-container">
+            <h1 class="weather-heading"><span>W</span>eather site</h1>
+            <form action="#FIXME" method="post" class="city-form">
+              <div class="input-group">
+                <input type="text" class="city-input" placeholder="Search cities separated by comma">
+              </div>
+              <div class="input-control">
+                <input type="submit" value="Search">
+              </div>
+            </form>
+          </div>
+          <div class="error-container">
+            <span class="validate-city">Please search cities</span>
+            <span class="instruction">separated by comma...</span>
+          </div>
+        </div>
+      </section>
+      <div class="weather-container">
+        <div class="wrapper">
+        </div>
+      </div>
     </main>
     <!--main section end-->
 
     <!--footer section start-->
-    <footer>      
+    <footer>
 
     </footer>
     <!--footer section end-->
@@ -43,4 +64,5 @@
   <!--container end-->
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>
