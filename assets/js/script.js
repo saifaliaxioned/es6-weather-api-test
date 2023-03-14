@@ -45,8 +45,13 @@ cityForm.addEventListener('submit', (e) => {
     errorContainer.classList.add('hide-content');
     weatherItem.innerHTML = '';
     const cityList = cityName.value.split(',');
-    for (let i = 0; i < cityList.length; i++) {
-      const city = cityList[i].trim();
+    const filteredCity = cityList.filter(item => {
+      if (item) {
+        return item;
+      }
+    })
+    for (let i = 0; i < filteredCity.length; i++) {
+      const city = filteredCity[i].trim();
       const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
       fetchData(url);
     }
